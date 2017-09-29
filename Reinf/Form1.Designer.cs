@@ -33,6 +33,19 @@
             this.tabPrincipal = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridContri = new System.Windows.Forms.DataGridView();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.protMensaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataRecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.protGovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numRecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datEnvioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtinicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtfinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fillpanelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reinfDataSet = new Reinf.reinfDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridProce = new System.Windows.Forms.DataGridView();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -141,28 +154,15 @@
             this.btEnviar = new System.Windows.Forms.Button();
             this.btAtuPainel = new System.Windows.Forms.Button();
             this.groupContri = new System.Windows.Forms.GroupBox();
-            this.lblCNPJ = new System.Windows.Forms.Label();
-            this.lblEmpresa = new System.Windows.Forms.Label();
             this.comboEmpresa = new System.Windows.Forms.ComboBox();
-            this.reinfDataSet = new Reinf.reinfDataSet();
-            this.fillpanelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fillpanelTableAdapter = new Reinf.reinfDataSetTableAdapters.fillpanelTableAdapter();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.protMensaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataRecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.protGovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numRecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datEnvioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEventoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtinicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtfinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contribuinteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fillpanelTableAdapter = new Reinf.reinfDataSetTableAdapters.fillpanelTableAdapter();
             this.contribuinteTableAdapter = new Reinf.reinfDataSetTableAdapters.contribuinteTableAdapter();
             this.tabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContri)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fillpanelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reinfDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProce)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -178,8 +178,6 @@
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEspDes)).BeginInit();
             this.groupContri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reinfDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fillpanelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contribuinteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,10 +191,10 @@
             this.tabPrincipal.Controls.Add(this.tabPage6);
             this.tabPrincipal.Controls.Add(this.tabPage7);
             this.tabPrincipal.Controls.Add(this.tabPage8);
-            this.tabPrincipal.Location = new System.Drawing.Point(12, 124);
+            this.tabPrincipal.Location = new System.Drawing.Point(12, 69);
             this.tabPrincipal.Name = "tabPrincipal";
             this.tabPrincipal.SelectedIndex = 0;
-            this.tabPrincipal.Size = new System.Drawing.Size(902, 292);
+            this.tabPrincipal.Size = new System.Drawing.Size(902, 347);
             this.tabPrincipal.TabIndex = 0;
             // 
             // tabPage1
@@ -205,7 +203,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(894, 266);
+            this.tabPage1.Size = new System.Drawing.Size(894, 321);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Contribuinte";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -235,8 +233,95 @@
             this.dataGridContri.Name = "dataGridContri";
             this.dataGridContri.ReadOnly = true;
             this.dataGridContri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridContri.Size = new System.Drawing.Size(888, 260);
+            this.dataGridContri.Size = new System.Drawing.Size(888, 315);
             this.dataGridContri.TabIndex = 0;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // protMensaDataGridViewTextBoxColumn
+            // 
+            this.protMensaDataGridViewTextBoxColumn.DataPropertyName = "protMensa";
+            this.protMensaDataGridViewTextBoxColumn.HeaderText = "Protocolo Mensageria";
+            this.protMensaDataGridViewTextBoxColumn.Name = "protMensaDataGridViewTextBoxColumn";
+            this.protMensaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataRecDataGridViewTextBoxColumn
+            // 
+            this.dataRecDataGridViewTextBoxColumn.DataPropertyName = "dataRec";
+            this.dataRecDataGridViewTextBoxColumn.HeaderText = "Data Recepção";
+            this.dataRecDataGridViewTextBoxColumn.Name = "dataRecDataGridViewTextBoxColumn";
+            this.dataRecDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // protGovDataGridViewTextBoxColumn
+            // 
+            this.protGovDataGridViewTextBoxColumn.DataPropertyName = "protGov";
+            this.protGovDataGridViewTextBoxColumn.HeaderText = "Protocolo Governo";
+            this.protGovDataGridViewTextBoxColumn.Name = "protGovDataGridViewTextBoxColumn";
+            this.protGovDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numRecDataGridViewTextBoxColumn
+            // 
+            this.numRecDataGridViewTextBoxColumn.DataPropertyName = "numRec";
+            this.numRecDataGridViewTextBoxColumn.HeaderText = "Nro Recibo";
+            this.numRecDataGridViewTextBoxColumn.Name = "numRecDataGridViewTextBoxColumn";
+            this.numRecDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datEnvioDataGridViewTextBoxColumn
+            // 
+            this.datEnvioDataGridViewTextBoxColumn.DataPropertyName = "datEnvio";
+            this.datEnvioDataGridViewTextBoxColumn.HeaderText = "Data Envio";
+            this.datEnvioDataGridViewTextBoxColumn.Name = "datEnvioDataGridViewTextBoxColumn";
+            this.datEnvioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo Evento";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idEventoDataGridViewTextBoxColumn
+            // 
+            this.idEventoDataGridViewTextBoxColumn.DataPropertyName = "idEvento";
+            this.idEventoDataGridViewTextBoxColumn.HeaderText = "Ident do Evento";
+            this.idEventoDataGridViewTextBoxColumn.Name = "idEventoDataGridViewTextBoxColumn";
+            this.idEventoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cnpjDataGridViewTextBoxColumn
+            // 
+            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "cnpj";
+            this.cnpjDataGridViewTextBoxColumn.HeaderText = "CNPJ Contribuinte";
+            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
+            this.cnpjDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dtinicialDataGridViewTextBoxColumn
+            // 
+            this.dtinicialDataGridViewTextBoxColumn.DataPropertyName = "dtinicial";
+            this.dtinicialDataGridViewTextBoxColumn.HeaderText = "Data Inicial Vigência";
+            this.dtinicialDataGridViewTextBoxColumn.Name = "dtinicialDataGridViewTextBoxColumn";
+            this.dtinicialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dtfinalDataGridViewTextBoxColumn
+            // 
+            this.dtfinalDataGridViewTextBoxColumn.DataPropertyName = "dtfinal";
+            this.dtfinalDataGridViewTextBoxColumn.HeaderText = "Data Final Vigência";
+            this.dtfinalDataGridViewTextBoxColumn.Name = "dtfinalDataGridViewTextBoxColumn";
+            this.dtfinalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fillpanelBindingSource
+            // 
+            this.fillpanelBindingSource.DataMember = "fillpanel";
+            this.fillpanelBindingSource.DataSource = this.reinfDataSet;
+            // 
+            // reinfDataSet
+            // 
+            this.reinfDataSet.DataSetName = "reinfDataSet";
+            this.reinfDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage2
             // 
@@ -1269,35 +1354,13 @@
             // 
             // groupContri
             // 
-            this.groupContri.Controls.Add(this.lblCNPJ);
-            this.groupContri.Controls.Add(this.lblEmpresa);
             this.groupContri.Controls.Add(this.comboEmpresa);
             this.groupContri.Location = new System.Drawing.Point(10, 8);
             this.groupContri.Name = "groupContri";
-            this.groupContri.Size = new System.Drawing.Size(903, 110);
+            this.groupContri.Size = new System.Drawing.Size(903, 55);
             this.groupContri.TabIndex = 3;
             this.groupContri.TabStop = false;
             this.groupContri.Text = "Dados do Contribuinte";
-            // 
-            // lblCNPJ
-            // 
-            this.lblCNPJ.AutoSize = true;
-            this.lblCNPJ.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblCNPJ.Location = new System.Drawing.Point(6, 79);
-            this.lblCNPJ.Name = "lblCNPJ";
-            this.lblCNPJ.Size = new System.Drawing.Size(103, 13);
-            this.lblCNPJ.TabIndex = 2;
-            this.lblCNPJ.Text = "                                ";
-            // 
-            // lblEmpresa
-            // 
-            this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.BackColor = System.Drawing.Color.Gainsboro;
-            this.lblEmpresa.Location = new System.Drawing.Point(6, 55);
-            this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(103, 13);
-            this.lblEmpresa.TabIndex = 1;
-            this.lblEmpresa.Text = "                                ";
             // 
             // comboEmpresa
             // 
@@ -1309,101 +1372,14 @@
             this.comboEmpresa.Size = new System.Drawing.Size(330, 21);
             this.comboEmpresa.TabIndex = 0;
             // 
-            // reinfDataSet
-            // 
-            this.reinfDataSet.DataSetName = "reinfDataSet";
-            this.reinfDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fillpanelBindingSource
-            // 
-            this.fillpanelBindingSource.DataMember = "fillpanel";
-            this.fillpanelBindingSource.DataSource = this.reinfDataSet;
-            // 
-            // fillpanelTableAdapter
-            // 
-            this.fillpanelTableAdapter.ClearBeforeFill = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // protMensaDataGridViewTextBoxColumn
-            // 
-            this.protMensaDataGridViewTextBoxColumn.DataPropertyName = "protMensa";
-            this.protMensaDataGridViewTextBoxColumn.HeaderText = "Protocolo Mensageria";
-            this.protMensaDataGridViewTextBoxColumn.Name = "protMensaDataGridViewTextBoxColumn";
-            this.protMensaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataRecDataGridViewTextBoxColumn
-            // 
-            this.dataRecDataGridViewTextBoxColumn.DataPropertyName = "dataRec";
-            this.dataRecDataGridViewTextBoxColumn.HeaderText = "Data Recepção";
-            this.dataRecDataGridViewTextBoxColumn.Name = "dataRecDataGridViewTextBoxColumn";
-            this.dataRecDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // protGovDataGridViewTextBoxColumn
-            // 
-            this.protGovDataGridViewTextBoxColumn.DataPropertyName = "protGov";
-            this.protGovDataGridViewTextBoxColumn.HeaderText = "Protocolo Governo";
-            this.protGovDataGridViewTextBoxColumn.Name = "protGovDataGridViewTextBoxColumn";
-            this.protGovDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numRecDataGridViewTextBoxColumn
-            // 
-            this.numRecDataGridViewTextBoxColumn.DataPropertyName = "numRec";
-            this.numRecDataGridViewTextBoxColumn.HeaderText = "Nro Recibo";
-            this.numRecDataGridViewTextBoxColumn.Name = "numRecDataGridViewTextBoxColumn";
-            this.numRecDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datEnvioDataGridViewTextBoxColumn
-            // 
-            this.datEnvioDataGridViewTextBoxColumn.DataPropertyName = "datEnvio";
-            this.datEnvioDataGridViewTextBoxColumn.HeaderText = "Data Envio";
-            this.datEnvioDataGridViewTextBoxColumn.Name = "datEnvioDataGridViewTextBoxColumn";
-            this.datEnvioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "tipo";
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo Evento";
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idEventoDataGridViewTextBoxColumn
-            // 
-            this.idEventoDataGridViewTextBoxColumn.DataPropertyName = "idEvento";
-            this.idEventoDataGridViewTextBoxColumn.HeaderText = "Ident do Evento";
-            this.idEventoDataGridViewTextBoxColumn.Name = "idEventoDataGridViewTextBoxColumn";
-            this.idEventoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cnpjDataGridViewTextBoxColumn
-            // 
-            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "cnpj";
-            this.cnpjDataGridViewTextBoxColumn.HeaderText = "CNPJ Contribuinte";
-            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
-            this.cnpjDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dtinicialDataGridViewTextBoxColumn
-            // 
-            this.dtinicialDataGridViewTextBoxColumn.DataPropertyName = "dtinicial";
-            this.dtinicialDataGridViewTextBoxColumn.HeaderText = "Data Inicial Vigência";
-            this.dtinicialDataGridViewTextBoxColumn.Name = "dtinicialDataGridViewTextBoxColumn";
-            this.dtinicialDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dtfinalDataGridViewTextBoxColumn
-            // 
-            this.dtfinalDataGridViewTextBoxColumn.DataPropertyName = "dtfinal";
-            this.dtfinalDataGridViewTextBoxColumn.HeaderText = "Data Final Vigência";
-            this.dtfinalDataGridViewTextBoxColumn.Name = "dtfinalDataGridViewTextBoxColumn";
-            this.dtfinalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // contribuinteBindingSource
             // 
             this.contribuinteBindingSource.DataMember = "contribuinte";
             this.contribuinteBindingSource.DataSource = this.reinfDataSet;
+            // 
+            // fillpanelTableAdapter
+            // 
+            this.fillpanelTableAdapter.ClearBeforeFill = true;
             // 
             // contribuinteTableAdapter
             // 
@@ -1428,6 +1404,8 @@
             this.tabPrincipal.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContri)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fillpanelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reinfDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProce)).EndInit();
             this.tabPage3.ResumeLayout(false);
@@ -1443,9 +1421,6 @@
             this.tabPage8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEspDes)).EndInit();
             this.groupContri.ResumeLayout(false);
-            this.groupContri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reinfDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fillpanelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contribuinteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1565,8 +1540,6 @@
         private System.Windows.Forms.Button btAtuPainel;
         private System.Windows.Forms.GroupBox groupContri;
         private System.Windows.Forms.ComboBox comboEmpresa;
-        private System.Windows.Forms.Label lblCNPJ;
-        private System.Windows.Forms.Label lblEmpresa;
         private reinfDataSet reinfDataSet;
         private System.Windows.Forms.BindingSource fillpanelBindingSource;
         private reinfDataSetTableAdapters.fillpanelTableAdapter fillpanelTableAdapter;
