@@ -61,6 +61,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funcoes\ExtevtInfoContri.cs" />
+    <Compile Include="Funcoes\FuncoesXml.cs" />
+    <Compile Include="Modelos\evtInfoContri.cs" />
+    <Compile Include="Modelos\impXml.cs" />
+    <Compile Include="Modelos\infoContri\ideContri.cs" />
+    <Compile Include="Modelos\infoContri\ideEvento.cs" />
+    <Compile Include="Modelos\infoContri\inclusao.cs" />
+    <Compile Include="Modelos\infoContri\inclusao\contato.cs" />
+    <Compile Include="Modelos\infoContri\inclusao\idePeriodo.cs" />
+    <Compile Include="Modelos\infoContri\inclusao\infoCadastro.cs" />
+    <Compile Include="Modelos\infoContri\inclusao\infoEFR.cs" />
+    <Compile Include="Modelos\infoContri\inclusao\softHouse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reinfDataSet.Designer.cs">
