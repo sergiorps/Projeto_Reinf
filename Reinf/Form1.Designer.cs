@@ -158,6 +158,8 @@
             this.contribuinteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fillpanelTableAdapter = new Reinf.reinfDataSetTableAdapters.fillpanelTableAdapter();
             this.contribuinteTableAdapter = new Reinf.reinfDataSetTableAdapters.contribuinteTableAdapter();
+            this.btnLerXML = new System.Windows.Forms.Button();
+            this.webXML = new System.Windows.Forms.WebBrowser();
             this.tabPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridContri)).BeginInit();
@@ -329,7 +331,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(894, 266);
+            this.tabPage2.Size = new System.Drawing.Size(894, 321);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Processos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -359,7 +361,7 @@
             this.dataGridProce.Name = "dataGridProce";
             this.dataGridProce.ReadOnly = true;
             this.dataGridProce.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridProce.Size = new System.Drawing.Size(888, 260);
+            this.dataGridProce.Size = new System.Drawing.Size(888, 315);
             this.dataGridProce.TabIndex = 1;
             // 
             // dataGridViewComboBoxColumn1
@@ -473,7 +475,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(894, 266);
+            this.tabPage3.Size = new System.Drawing.Size(894, 321);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Contribuição Previdenciária";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -503,7 +505,7 @@
             this.dataGridCPrev.Name = "dataGridCPrev";
             this.dataGridCPrev.ReadOnly = true;
             this.dataGridCPrev.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridCPrev.Size = new System.Drawing.Size(888, 260);
+            this.dataGridCPrev.Size = new System.Drawing.Size(888, 315);
             this.dataGridCPrev.TabIndex = 2;
             // 
             // dataGridViewComboBoxColumn3
@@ -617,7 +619,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(894, 266);
+            this.tabPage4.Size = new System.Drawing.Size(894, 321);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Associação Desportiva";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -647,7 +649,7 @@
             this.dataGridAssDes.Name = "dataGridAssDes";
             this.dataGridAssDes.ReadOnly = true;
             this.dataGridAssDes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridAssDes.Size = new System.Drawing.Size(888, 260);
+            this.dataGridAssDes.Size = new System.Drawing.Size(888, 315);
             this.dataGridAssDes.TabIndex = 3;
             // 
             // dataGridViewComboBoxColumn5
@@ -761,7 +763,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(894, 266);
+            this.tabPage5.Size = new System.Drawing.Size(894, 321);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Comercialiação da Produção";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -791,7 +793,7 @@
             this.dataGridComProd.Name = "dataGridComProd";
             this.dataGridComProd.ReadOnly = true;
             this.dataGridComProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridComProd.Size = new System.Drawing.Size(888, 260);
+            this.dataGridComProd.Size = new System.Drawing.Size(888, 315);
             this.dataGridComProd.TabIndex = 3;
             // 
             // dataGridViewComboBoxColumn7
@@ -905,7 +907,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(894, 266);
+            this.tabPage6.Size = new System.Drawing.Size(894, 321);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Retenções na Fonte";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -935,7 +937,7 @@
             this.dataGridRetFon.Name = "dataGridRetFon";
             this.dataGridRetFon.ReadOnly = true;
             this.dataGridRetFon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridRetFon.Size = new System.Drawing.Size(888, 260);
+            this.dataGridRetFon.Size = new System.Drawing.Size(888, 315);
             this.dataGridRetFon.TabIndex = 3;
             // 
             // dataGridViewComboBoxColumn9
@@ -1049,7 +1051,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(894, 266);
+            this.tabPage7.Size = new System.Drawing.Size(894, 321);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Fechamento e Abertura";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1079,7 +1081,7 @@
             this.dataGridFechAbe.Name = "dataGridFechAbe";
             this.dataGridFechAbe.ReadOnly = true;
             this.dataGridFechAbe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridFechAbe.Size = new System.Drawing.Size(888, 260);
+            this.dataGridFechAbe.Size = new System.Drawing.Size(888, 315);
             this.dataGridFechAbe.TabIndex = 3;
             // 
             // dataGridViewComboBoxColumn11
@@ -1193,7 +1195,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(894, 266);
+            this.tabPage8.Size = new System.Drawing.Size(894, 321);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Espetáculo Desportivo";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1223,7 +1225,7 @@
             this.dataGridEspDes.Name = "dataGridEspDes";
             this.dataGridEspDes.ReadOnly = true;
             this.dataGridEspDes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridEspDes.Size = new System.Drawing.Size(888, 260);
+            this.dataGridEspDes.Size = new System.Drawing.Size(888, 315);
             this.dataGridEspDes.TabIndex = 3;
             // 
             // dataGridViewComboBoxColumn13
@@ -1385,11 +1387,31 @@
             // 
             this.contribuinteTableAdapter.ClearBeforeFill = true;
             // 
+            // btnLerXML
+            // 
+            this.btnLerXML.Location = new System.Drawing.Point(778, 463);
+            this.btnLerXML.Name = "btnLerXML";
+            this.btnLerXML.Size = new System.Drawing.Size(129, 35);
+            this.btnLerXML.TabIndex = 4;
+            this.btnLerXML.Text = "Ler XML";
+            this.btnLerXML.UseVisualStyleBackColor = true;
+            this.btnLerXML.Click += new System.EventHandler(this.btnLerXML_Click);
+            // 
+            // webXML
+            // 
+            this.webXML.Location = new System.Drawing.Point(10, 422);
+            this.webXML.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webXML.Name = "webXML";
+            this.webXML.Size = new System.Drawing.Size(606, 131);
+            this.webXML.TabIndex = 5;
+            // 
             // formPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 462);
+            this.ClientSize = new System.Drawing.Size(922, 565);
+            this.Controls.Add(this.webXML);
+            this.Controls.Add(this.btnLerXML);
             this.Controls.Add(this.groupContri);
             this.Controls.Add(this.btAtuPainel);
             this.Controls.Add(this.btEnviar);
@@ -1556,6 +1578,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dtfinalDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource contribuinteBindingSource;
         private reinfDataSetTableAdapters.contribuinteTableAdapter contribuinteTableAdapter;
+        private System.Windows.Forms.Button btnLerXML;
+        private System.Windows.Forms.WebBrowser webXML;
     }
 }
 
