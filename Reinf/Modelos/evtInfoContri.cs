@@ -1,7 +1,9 @@
-﻿using System.Xml.Serialization;
+﻿using System;
+using System.Xml.Serialization;
 
 namespace Reinf.Models
 {
+    [Serializable]
     [XmlRoot(Namespace = "http://www.reinf.esocial.gov.br/schemas/evtInfoContribuinte/v1_02_00")]
     public class evtInfoContri
     {

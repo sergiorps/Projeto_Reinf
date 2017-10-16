@@ -1,5 +1,8 @@
-﻿namespace Reinf.Funcoes
+﻿using System;
+
+namespace Reinf.Funcoes
 {
+    [Serializable]
     public static class ExtevtInfoContri
     {
         public static Models.evtInfoContri CarregarDeArquivoXml(this Models.evtInfoContri contri, string arquivoXml)
@@ -13,4 +16,4 @@
             FuncoesXml.ClasseParaArquivoXml(contri, arquivoXml);
         }
     }
-}
+ }
